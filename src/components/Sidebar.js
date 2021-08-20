@@ -49,7 +49,7 @@ export default function Sidebar() {
           {"15 degrees"}
         </div>
       </CodeBlocks>
-      <div className="font-bold"> {"Motion"} </div>
+      <div className="font-bold"> {"Looks"} </div>
       <CodeBlocks objType="block" onDropObj={copyObject} fid="l1">
         <div className="flex flex-row flex-wrap bg-purple-500 text-white px-2 py-1 my-2 text-sm cursor-pointer" >
           {"Say Hi..."}
