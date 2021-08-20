@@ -1,15 +1,17 @@
 import React from "react";
 import Icon from "./Icon";
 import CodeBlocks from "./CodeBlocks";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Sidebar() {
 
   const dispatch = useDispatch();
+  const Index = useSelector(state => state.IndexReducer);
 
   function copyObject(item, fid){
-    dispatch({type: "ADD_OBJ", payload: item});
-    dispatch({type: "ADD_FUNC", payload: fid});
+    // dispatch({type: "ADD_OBJ", payload: item});
+    // dispatch({type: "ADD_FUNC", payload: fid});
+    dispatch({type: "ADD_SPRITE_ACTION", payload: {index : Index, code: {item, fid}}})
   }
 
   return (
